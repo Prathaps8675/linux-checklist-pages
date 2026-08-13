@@ -70,17 +70,17 @@
                         <div class="dot dot-yellow"></div>
                         <div class="dot dot-green"></div>
                     </div>
-                    <div class="terminal-title">root@master-server:~ (install.sh)</div>
+                    <div class="terminal-title">root@master-server:~ (infrasight-installer.run)</div>
                     <i data-lucide="code" style="width:14px;height:14px;color:var(--text-dim);"></i>
                 </div>
                 <div class="terminal-body">
-                    <div><span class="prompt">root@master-server:~#</span> <span class="command">chmod +x install.sh && ./install.sh</span></div>
+                    <div><span class="prompt">root@master-server:~#</span> <span class="command">chmod +x infrasight-installer.run && sudo ./infrasight-installer.run</span></div>
+                    <div class="output-info">[INFO] Extracting InfraSight Enterprise Installer Package...</div>
                     <div class="output-info">[INFO] Detecting OS Distribution: Red Hat Enterprise Linux 8.10 (Ootpa)...</div>
-                    <div class="output-info">[INFO] Checking dynamic HTTP port occupation... Port 8088 AVAILABLE.</div>
-                    <div class="output-info">[INFO] Setting up Python virtualenv & Flask/Gunicorn application server...</div>
+                    <div class="output-info">[INFO] Setting up Python environment & Gunicorn server at /opt/infrasight...</div>
                     <div class="output-info">[INFO] Configuring Nginx reverse proxy with catch-all domain and direct IP routes...</div>
-                    <div class="output-info">[INFO] Installing signed commercial license key: XCO - Xius (250 Servers Licensed)...</div>
-                    <div class="output-success">[SUCCESS] Enterprise Master Server installed successfully in 3.1s!</div>
+                    <div class="output-info">[INFO] Activating commercial license key: Enterprise Infrastructure (250 Hosts)...</div>
+                    <div class="output-success">[SUCCESS] InfraSight Master Application Server deployed successfully in 3.1s!</div>
                     <div class="output-success">► Web UI URL: http://10.0.27.53:8088 (or http://health.acmecorp.com)</div>
                 </div>
             </div>
@@ -326,49 +326,50 @@
         </div>
     </section>
 
-    <!-- Master Binary Installation Steps Section -->
+    <!-- Master Application Installation Steps Section -->
     <section id="installation" class="section" style="background: rgba(15, 23, 42, 0.4); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Deployment Guide</span>
-                <h2 class="section-title">Fast Master Binary Installation (Single Command)</h2>
-                <p class="section-desc">Deploy the Master Monitoring Application Server in under 3 minutes with zero manual setup required.</p>
+                <h2 class="section-title">Fast Master Application Installation</h2>
+                <p class="section-desc">Deploy the InfraSight Master Monitoring Server in under 3 minutes with zero manual setup required.</p>
             </div>
 
             <!-- Install Step Tabs -->
             <div class="install-tabs">
-                <button class="tab-btn active" data-tab="tab-master">1. Master Server Setup</button>
-                <button class="tab-btn" data-tab="tab-agent">2. Client Executable Setup</button>
+                <button class="tab-btn active" data-tab="tab-master">1. Master Application Setup</button>
+                <button class="tab-btn" data-tab="tab-agent">2. Client Agent Setup</button>
                 <button class="tab-btn" data-tab="tab-cron">3. Automated Cron Schedule</button>
             </div>
 
             <!-- Tab Content 1: Master Setup -->
             <div id="tab-master" class="install-box tab-content">
-                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 1: Install Master Dashboard Server</h3>
-                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Run the installer script or self-extracting binary executable on your Master Linux Server as root:</p>
+                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 1: Install InfraSight Master Application</h3>
+                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Download and run the self-extracting application package on your Master Linux Server as root:</p>
                 <div class="code-block">
-                    <code>sudo ./install.sh</code>
+                    <code>chmod +x infrasight-installer.run && sudo ./infrasight-installer.run</code>
                     <button class="copy-btn">Copy</button>
                 </div>
                 <div class="output-info" style="margin-top:16px;font-size:0.85rem;line-height:1.6;">
-                    ✔ Automatically installs Nginx, Gunicorn, Python virtualenv dependencies.<br>
-                    ✔ Pre-configures client binary executable (<code>health-check</code>) for distribution.<br>
+                    ✔ Closed-source self-extracting application package (<code>infrasight-installer.run</code>).<br>
+                    ✔ Automatically installs Nginx, Gunicorn, Python virtualenv at <code>/opt/infrasight</code>.<br>
+                    ✔ Pre-configures client agent application (<code>infrasight-agent</code>) for enterprise host distribution.<br>
                     ✔ Access Web UI at: <strong>http://&lt;MASTER_IP&gt;:8088</strong>
                 </div>
             </div>
 
             <!-- Tab Content 2: Agent Setup -->
             <div id="tab-agent" class="install-box tab-content" style="display:none;">
-                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 2: Run Executable Binary on Client Server</h3>
-                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Run the pre-compiled binary executable (C binary compiled via gcc/shc) on any Linux server (RHEL, Ubuntu, Debian, Oracle, SUSE, Amazon Linux):</p>
+                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 2: Run Agent Application on Client Server</h3>
+                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Run the standalone executable application (C binary compiled via gcc/shc) on any Linux server (RHEL, Ubuntu, Debian, Oracle, SUSE, Amazon Linux):</p>
                 <div class="code-block">
-                    <code>sudo ./health-check</code>
+                    <code>sudo ./infrasight-agent</code>
                     <button class="copy-btn">Copy</button>
                 </div>
                 <div class="output-info" style="margin-top:16px;font-size:0.85rem;line-height:1.6;">
-                    ✔ Ships as a compiled binary executable — hides bash source code from end users on client node servers.<br>
+                    ✔ Ships as a compiled application — completely hides bash source code from end users on node servers.<br>
                     ✔ Prompts for Master Server URL on first run and saves configuration securely.<br>
-                    ✔ Performs health check in ~3 seconds and uploads HTML/TXT/JSON reports to Master Server over Private or Public IP.
+                    ✔ Performs health scan in ~3 seconds and uploads HTML/TXT/JSON reports to Master Server.
                 </div>
             </div>
 
@@ -377,7 +378,7 @@
                 <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 3: Schedule Automated Periodic Scans</h3>
                 <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">To schedule daily health scans automatically at 2:00 AM via crontab:</p>
                 <div class="code-block">
-                    <code>0 2 * * * /usr/local/bin/health-check >/dev/null 2>&1</code>
+                    <code>0 2 * * * /usr/local/bin/infrasight-agent >/dev/null 2>&1</code>
                     <button class="copy-btn">Copy</button>
                 </div>
             </div>
