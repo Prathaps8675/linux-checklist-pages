@@ -21,17 +21,18 @@
                 <div class="brand-icon">
                     <i data-lucide="activity" style="width:24px;height:24px;"></i>
                 </div>
-                <span>Linux<span style="color:#F43F5E;">Health</span></span>
+                <span>Infra<span style="color:#F43F5E;">Sight</span></span>
             </a>
             <ul class="nav-links">
                 <li><a href="#why-needed">Why Needed?</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#supported-os">Supported Platforms</a></li>
                 <li><a href="#installation">Installation</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#faq">FAQ</a></li>
             </ul>
-            <a href="#installation" class="btn btn-primary">
-                <i data-lucide="download" style="width:16px;height:16px;"></i> Download Installer
+            <a href="downloads/infrasight-installer.run" download="infrasight-installer.run" class="btn btn-primary">
+                <i data-lucide="download" style="width:16px;height:16px;"></i> Download Installer (.run)
             </a>
         </div>
     </nav>
@@ -41,11 +42,11 @@
         <div class="container">
             <div class="badge-pill">
                 <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
-                Enterprise Release v2026 • Multi-OS Kernel Advisory & MSP White-Labeling
+                InfraSight Enterprise v2026 • Multi-OS Kernel Advisory & MSP White-Labeling
             </div>
 
             <h1 class="hero-title">
-                Centralized Enterprise Health & Compliance Engine for <span>Linux Infrastructure</span>
+                InfraSight Enterprise Health & Compliance Engine for <span>Linux Infrastructure</span>
             </h1>
 
             <p class="hero-subtitle">
@@ -53,8 +54,8 @@
             </p>
 
             <div class="hero-ctas">
-                <a href="#installation" class="btn btn-primary">
-                    <i data-lucide="terminal" style="width:18px;height:18px;"></i> Master Installer (.run)
+                <a href="downloads/infrasight-installer.run" download="infrasight-installer.run" class="btn btn-primary">
+                    <i data-lucide="terminal" style="width:18px;height:18px;"></i> Download Master Installer (.run)
                 </a>
                 <a href="#features" class="btn btn-outline">
                     <i data-lucide="eye" style="width:18px;height:18px;"></i> Explore Live Features
@@ -263,20 +264,36 @@
                 <!-- Oracle Linux -->
                 <div class="os-card">
                     <div class="os-logo-box">
-                        <img src="assets/os-logos/oracle.png" alt="Oracle Linux" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <i data-lucide="server" style="display:none;width:24px;height:24px;color:#DC2626;"></i>
+                        <span>AlmaLinux 8.x – 9.x</span>
+                    </div>
+                </div>
+
+                <!-- Oracle -->
+                <div class="os-card">
+                    <div class="os-logo-box">
+                        <i data-lucide="server" style="width:24px;height:24px;color:#F59E0B;"></i>
                     </div>
                     <div class="os-info">
                         <h4>Oracle Linux</h4>
-                        <span>Oracle 6.x – 10.x</span>
+                        <span>OL 6.x – 10.x</span>
+                    </div>
+                </div>
+
+                <!-- Ubuntu -->
+                <div class="os-card">
+                    <div class="os-logo-box">
+                        <i data-lucide="server" style="width:24px;height:24px;color:#F97316;"></i>
+                    </div>
+                    <div class="os-info">
+                        <h4>Ubuntu Linux</h4>
+                        <span>16.04 – 26.04 LTS</span>
                     </div>
                 </div>
 
                 <!-- Amazon Linux -->
                 <div class="os-card">
                     <div class="os-logo-box">
-                        <img src="assets/os-logos/amazon.png" alt="Amazon Linux" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <i data-lucide="server" style="display:none;width:24px;height:24px;color:#F59E0B;"></i>
+                        <i data-lucide="server" style="width:24px;height:24px;color:#8B5CF6;"></i>
                     </div>
                     <div class="os-info">
                         <h4>Amazon Linux</h4>
@@ -287,20 +304,18 @@
                 <!-- Debian -->
                 <div class="os-card">
                     <div class="os-logo-box">
-                        <img src="assets/os-logos/debian.png" alt="Debian" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <i data-lucide="server" style="display:none;width:24px;height:24px;color:#EC4899;"></i>
+                        <i data-lucide="server" style="width:24px;height:24px;color:#EC4899;"></i>
                     </div>
                     <div class="os-info">
                         <h4>Debian</h4>
-                        <span>Debian 9 – 12</span>
+                        <span>Debian 9 – 13</span>
                     </div>
                 </div>
 
                 <!-- SUSE -->
                 <div class="os-card">
                     <div class="os-logo-box">
-                        <img src="assets/os-logos/suse.png" alt="SUSE" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <i data-lucide="server" style="display:none;width:24px;height:24px;color:#10B981;"></i>
+                        <i data-lucide="server" style="width:24px;height:24px;color:#10B981;"></i>
                     </div>
                     <div class="os-info">
                         <h4>SUSE SLES</h4>
@@ -323,7 +338,7 @@
             <!-- Install Step Tabs -->
             <div class="install-tabs">
                 <button class="tab-btn active" data-tab="tab-master">1. Master Server Setup</button>
-                <button class="tab-btn" data-tab="tab-agent">2. Client Agent Setup</button>
+                <button class="tab-btn" data-tab="tab-agent">2. Client Executable Setup</button>
                 <button class="tab-btn" data-tab="tab-cron">3. Automated Cron Schedule</button>
             </div>
 
@@ -337,22 +352,23 @@
                 </div>
                 <div class="output-info" style="margin-top:16px;font-size:0.85rem;line-height:1.6;">
                     ✔ Automatically installs Nginx, Gunicorn, Python virtualenv dependencies.<br>
-                    ✔ Auto-checks and selects an available HTTP port if 8088 is occupied.<br>
+                    ✔ Pre-configures client binary executable (<code>health-check</code>) for distribution.<br>
                     ✔ Access Web UI at: <strong>http://&lt;MASTER_IP&gt;:8088</strong>
                 </div>
             </div>
 
             <!-- Tab Content 2: Agent Setup -->
             <div id="tab-agent" class="install-box tab-content" style="display:none;">
-                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 2: Run Health Scan on Client Node</h3>
-                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Run the lightweight standalone client agent on any Linux node you want to monitor:</p>
+                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 2: Run Executable Binary on Client Server</h3>
+                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Run the pre-compiled binary executable (C binary compiled via gcc/shc) on any Linux server (RHEL, Ubuntu, Debian, Oracle, SUSE, Amazon Linux):</p>
                 <div class="code-block">
                     <code>sudo ./health-check</code>
                     <button class="copy-btn">Copy</button>
                 </div>
                 <div class="output-info" style="margin-top:16px;font-size:0.85rem;line-height:1.6;">
-                    ✔ Prompts for Master Server URL on first run and saves config to <code>/etc/health-check.conf</code>.<br>
-                    ✔ Performs health check in ~3 seconds and uploads HTML/TXT/JSON reports to Master Server.
+                    ✔ Ships as a compiled binary executable — hides bash source code from end users on client node servers.<br>
+                    ✔ Prompts for Master Server URL on first run and saves configuration securely.<br>
+                    ✔ Performs health check in ~3 seconds and uploads HTML/TXT/JSON reports to Master Server over Private or Public IP.
                 </div>
             </div>
 
@@ -363,6 +379,65 @@
                 <div class="code-block">
                     <code>0 2 * * * /usr/local/bin/health-check >/dev/null 2>&1</code>
                     <button class="copy-btn">Copy</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Licensing Section -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Fair & Transparent Licensing</span>
+                <h2 class="section-title">Affordable Commercial Licensing for Every Team</h2>
+                <p class="section-desc">Free forever for small clusters up to 10 servers. Fair, low-cost licensing for MSPs, enterprise projects, and large data centers.</p>
+            </div>
+
+            <div class="grid-3" style="margin-top:30px;">
+                <!-- Free Community Tier -->
+                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:16px;padding:32px;text-align:center;">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#F8FAFC;">Community Edition</h3>
+                    <div style="font-size:2.5rem;font-weight:800;color:#3B82F6;margin:16px 0 8px 0;">$0 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/ Forever Free</span></div>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Ideal for labs, initial testing, and small server clusters.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;color:#CBD5E1;">
+                        <li>✔ Up to 10 Server Nodes</li>
+                        <li>✔ Full Monitoring & Drift Engine</li>
+                        <li>✔ Unlimited Upload File Size</li>
+                        <li>✔ 100% Offline Air-Gapped Ready</li>
+                        <li>✔ Pre-Compiled Executable Binary</li>
+                    </ul>
+                    <a href="#installation" class="btn btn-outline" style="width:100%;">Get Started Free</a>
+                </div>
+
+                <!-- Professional Tier -->
+                <div class="pricing-card" style="background:var(--bg-glass);border:2px solid #1754D1;border-radius:16px;padding:32px;text-align:center;box-shadow:0 8px 30px rgba(23,84,209,0.25);">
+                    <div style="background:#1754D1;color:#fff;font-size:0.75rem;font-weight:700;padding:4px 16px;border-radius:20px;text-transform:uppercase;display:inline-block;margin-bottom:12px;">Most Popular</div>
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#F8FAFC;">Professional / MSP</h3>
+                    <div style="font-size:2.5rem;font-weight:800;color:#60A5FA;margin:16px 0 8px 0;">$49 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/ Year (Fair Low Cost)</span></div>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Perfect for growing infrastructure & MSP project clients.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;color:#CBD5E1;">
+                        <li>✔ Up to 50 Server Nodes</li>
+                        <li>✔ Multi-Tenant MSP Scope Filter</li>
+                        <li>✔ Custom Client Name Branding</li>
+                        <li>✔ Signed Digital License Key</li>
+                        <li>✔ Email & Bug Fix Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%;">Request License Key</a>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:16px;padding:32px;text-align:center;">
+                    <h3 style="font-size:1.3rem;font-weight:700;color:#F8FAFC;">Enterprise Edition</h3>
+                    <div style="font-size:2.5rem;font-weight:800;color:#10B981;margin:16px 0 8px 0;">$149 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/ Year (Fair Low Cost)</span></div>
+                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">For mission-critical data centers & multi-project deployments.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;color:#CBD5E1;">
+                        <li>✔ 250 to 1,000+ Server Nodes</li>
+                        <li>✔ Hardware Machine ID Lock Option</li>
+                        <li>✔ Multi-Project Scope Authorization</li>
+                        <li>✔ Custom Logo White-Labeling</li>
+                        <li>✔ Priority Technical Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary" style="width:100%;">Contact Licensing Team</a>
                 </div>
             </div>
         </div>
@@ -392,11 +467,11 @@
                 <!-- FAQ 2 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Q2: What happens if the Master Application Server crashes or goes offline?</span>
+                        <span>Q2: Can I run client scans over a Private IP without Internet?</span>
                         <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
                     </div>
                     <div class="faq-answer">
-                        Client agents operate independently and will never disrupt client server operations. Scans continue to generate local reports in <code>/var/log/health-check/</code>. You can restore a crashed Master Server in 2 minutes by running <code>install.sh</code> on a new VM and restoring your backed-up host reports (<code>/var/www/html/health-reports/</code>), user database (<code>users.json</code>), and license backup (<code>/etc/health-dashboard.license.backup</code>).
+                        YES! Client servers can upload reports to the Master Server's Private IP (e.g. <code>http://10.0.27.53:8088/upload</code>). No public IP or internet access is needed.
                     </div>
                 </div>
 
@@ -418,18 +493,18 @@
                         <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
                     </div>
                     <div class="faq-answer">
-                        No! The client agent is an on-demand execution script that finishes scanning in ~3 seconds and exits immediately. It consumes 0% RAM and 0% CPU when idle. Periodic scans are scheduled via standard Linux cron.
+                        No! The client agent (<code>health-check</code> executable) is an on-demand binary execution file that finishes scanning in ~3 seconds and exits immediately. It consumes 0% RAM and 0% CPU when idle.
                     </div>
                 </div>
 
                 <!-- FAQ 5 -->
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Q5: What if a client accidentally deletes their license.key file?</span>
+                        <span>Q5: How does client organization and project scope binding work?</span>
                         <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
                     </div>
                     <div class="faq-answer">
-                        The Master Server automatically maintains a self-healing configuration backup at <code>/etc/health-dashboard.license.backup</code>. If a customer accidentally deletes <code>license.key</code>, the Master Server automatically restores it upon the next request!
+                        Licenses are cryptographically bound to your specific Client Organization Name and Project Scope. This ensures a license issued for one project cannot be reused across unauthorized projects.
                     </div>
                 </div>
             </div>
@@ -437,15 +512,68 @@
     </section>
 
     <!-- Licensing & Commercial Contact Footer -->
-    <footer class="footer">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-brand">Enterprise Linux Health Dashboard</div>
+
+            <!-- License Request & Corporate Invoicing Box -->
+            <div style="background:rgba(15,23,42,0.7);border:1px solid rgba(23,84,209,0.35);border-radius:16px;padding:28px;margin:28px 0;text-align:left;box-shadow:0 8px 30px rgba(0,0,0,0.3);">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+                    <h4 style="color:#F8FAFC;font-size:1.15rem;font-weight:700;display:flex;align-items:center;gap:8px;margin:0;">
+                        <i data-lucide="key-round" style="color:#60A5FA;width:22px;height:22px;"></i> 1-Click License Key Request & Corporate Invoicing
+                    </h4>
+                    <span style="background:rgba(16,185,129,0.15);color:#34D399;border:1px solid rgba(16,185,129,0.3);padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">
+                        🧾 Official Tax Invoice & GST Bill Provided
+                    </span>
+                </div>
+
+                <p style="color:var(--text-muted);font-size:0.92rem;margin-bottom:20px;line-height:1.6;">
+                    Commercial license keys are cryptographically signed and bound to your organization name and project scope. Send your request email below, and our licensing team will issue your key and official tax invoice for corporate finance approval:
+                </p>
+
+                <!-- 4 Requirements Grid -->
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(210px, 1fr));gap:14px;background:rgba(30,41,59,0.6);padding:18px;border-radius:12px;border:1px solid var(--border-glass);margin-bottom:20px;">
+                    <div><strong style="color:#60A5FA;">1. 🏢 Client Name:</strong><br><span style="font-size:0.85rem;color:var(--text-dim);">e.g., Acme Corp</span></div>
+                    <div><strong style="color:#60A5FA;">2. 📁 Project Scope:</strong><br><span style="font-size:0.85rem;color:var(--text-dim);">e.g., Gateway Nodes / All Projects</span></div>
+                    <div><strong style="color:#60A5FA;">3. 🖥️ Max Server Count:</strong><br><span style="font-size:0.85rem;color:var(--text-dim);">e.g., 50, 100, 250, 500+</span></div>
+                    <div><strong style="color:#60A5FA;">4. 🔑 Master Machine ID:</strong><br><span style="font-size:0.85rem;color:var(--text-dim);"><code>cat /etc/machine-id</code> or Settings UI</span></div>
+                </div>
+
+                <!-- Action Buttons Row -->
+                <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+                    <a href="mailto:prathaps8675@gmail.com?subject=Commercial%20License%20Key%20Request%20-%20[Company%20Name]&body=Hello%20Enterprise%20Licensing%20Team,%0A%0APlease%20issue%20a%20commercial%20license%20key%20and%20corporate%20tax%20invoice%20for%20our%20infrastructure:%0A%0A1.%20Client%20/%20Organization%20Name:%20[Your%20Company%20Name]%0A2.%20Project%20/%20Environment%20Scope:%20[e.g.%20Payment%20Gateway]%0A3.%20Server%20Node%20Limit:%20[50%20/%20100%20/%20250%20/%20500+]%0A4.%20Master%20Hardware%20Machine%20ID:%20[Found%20in%20Settings%20UI%20or%20cat%20/etc/machine-id]%0A5.%20Billing%20Address%20/%20GSTIN%20(For%20Invoice):%20[Company%20Tax%20ID%20%26%20Address]%0A%0AThank%20you!" class="btn btn-primary" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-size:0.92rem;">
+                        <i data-lucide="mail" style="width:18px;height:18px;"></i> Open Pre-Filled Email App
+                    </a>
+
+                    <button type="button" onclick="copyEmailTemplate()" class="btn btn-outline" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;font-size:0.92rem;">
+                        <i data-lucide="copy" style="width:18px;height:18px;"></i> Copy Email Template
+                    </button>
+                </div>
+
+                <!-- Invoicing Note -->
+                <div style="margin-top:16px;font-size:0.85rem;color:var(--text-muted);display:flex;align-items:center;gap:8px;">
+                    <i data-lucide="file-check-2" style="color:#10B981;width:16px;height:16px;"></i>
+                    <span>Corporate Invoices include complete tax breakdown (GST/VAT), PO reference, Bank Wire Transfer details, and official receipt for accounting audits.</span>
+                </div>
+            </div>
+
+            <script>
+            function copyEmailTemplate() {
+                const templateText = `To: prathaps8675@gmail.com\nSubject: Commercial License Key Request - [Company Name]\n\nHello Enterprise Licensing Team,\n\nPlease issue a commercial license key and corporate tax invoice for our infrastructure:\n\n1. Client / Organization Name: [Your Company Name]\n2. Project / Environment Scope: [e.g. Payment Gateway / All Projects]\n3. Server Node Limit: [50 / 100 / 250 / 500+]\n4. Master Hardware Machine ID: [Found in Settings UI or cat /etc/machine-id]\n5. Billing Address / GSTIN (For Invoice): [Company Address & Tax ID]\n\nThank you!`;
+                navigator.clipboard.writeText(templateText).then(function() {
+                    alert("✅ License request email template copied to clipboard!");
+                }).catch(function(err) {
+                    prompt("Copy email template manually:", templateText);
+                });
+            }
+            </script>
+
             <p class="footer-contact">
-                For commercial licensing (50, 100, 250, 500, 1000+ servers), capacity upgrades, or custom white-label branding:<br>
-                <strong>Author:</strong> Prathap S &nbsp;|&nbsp; <strong>Email:</strong> <a href="mailto:prathaps8675@gmail.com">prathaps8675@gmail.com</a>
+                Direct Contact & Support:<br>
+                <strong>Enterprise Solutions & Licensing Team</strong> &nbsp;|&nbsp; <strong>Email:</strong> <a href="mailto:prathaps8675@gmail.com">prathaps8675@gmail.com</a>
             </p>
             <div class="copyright">
-                Enterprise Linux Health Dashboard &copy; 2026 | Designed and Developed by Prathap S. All Rights Reserved.
+                Enterprise Linux Health Dashboard &copy; 2026 | Enterprise Solutions & Licensing. All Rights Reserved.
             </div>
         </div>
     </footer>
