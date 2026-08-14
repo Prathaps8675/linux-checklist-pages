@@ -104,6 +104,10 @@
                     <ul class="compare-list">
                         <li>
                             <i data-lucide="x-circle" style="color:#EF4444;width:18px;height:18px;"></i>
+                            <strong>Manual Per-Server Execution Friction:</strong> Requires sysadmins to log in to every server manually, run separate diagnostic scripts, and manage scattered report files.
+                        </li>
+                        <li>
+                            <i data-lucide="x-circle" style="color:#EF4444;width:18px;height:18px;"></i>
                             <strong>Heavy Background Daemons:</strong> Consumes 200MB+ RAM and constant CPU cycles per server node.
                         </li>
                         <li>
@@ -114,21 +118,21 @@
                             <i data-lucide="x-circle" style="color:#EF4444;width:18px;height:18px;"></i>
                             <strong>Expensive Per-Node Pricing:</strong> Monthly per-host subscription costs scale out of control for large clusters.
                         </li>
-                        <li>
-                            <i data-lucide="x-circle" style="color:#EF4444;width:18px;height:18px;"></i>
-                            <strong>Complex Client Dependencies:</strong> Requires heavy agent runtimes, specific glibc libraries, and open ports.
-                        </li>
                     </ul>
                 </div>
 
                 <!-- Solution Card -->
                 <div class="compare-card solution">
-                    <span class="card-badge badge-solution">Enterprise Linux Health Dashboard</span>
-                    <h3>Zero Overhead & 100% Offline Autonomy</h3>
+                    <span class="card-badge badge-solution">InfraSight Enterprise</span>
+                    <h3>Zero Manual Friction & Centralized Storage</h3>
                     <ul class="compare-list">
                         <li>
                             <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;"></i>
-                            <strong>0% Idle Memory Overhead:</strong> Runs as a 3-second standalone execution script via cron. Zero RAM consumed when idle.
+                            <strong>Centralized Common Repository:</strong> Zero manual per-server logging! All node scans upload automatically to one central Master Server (<code>/opt/infrasight/reports</code>).
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;"></i>
+                            <strong>0% Idle Memory Overhead:</strong> Runs as a 3-second standalone execution binary via cron. Zero RAM consumed when idle.
                         </li>
                         <li>
                             <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;"></i>
@@ -136,11 +140,7 @@
                         </li>
                         <li>
                             <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;"></i>
-                            <strong>Multi-OS Kernel Vulnerability Advisor:</strong> Dynamic CVE advisory engine covering RHEL, Ubuntu, Rocky, Alma, Oracle, Amazon Linux, and SUSE.
-                        </li>
-                        <li>
-                            <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;"></i>
-                            <strong>Before vs After Infrastructure Drift:</strong> Side-by-side comparative diff matrix highlighting config changes between scans.
+                            <strong>Before vs After Infrastructure Drift:</strong> Side-by-side comparative diff matrix highlighting config changes across historical scans.
                         </li>
                     </ul>
                 </div>
@@ -394,13 +394,13 @@
                 <p class="section-desc">Free forever for small clusters up to 10 servers. Fair, low-cost licensing for MSPs, enterprise projects, and large data centers.</p>
             </div>
 
-            <div class="grid-3" style="margin-top:30px;">
-                <!-- Free Community Tier -->
-                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:16px;padding:32px;text-align:center;">
-                    <h3 style="font-size:1.3rem;font-weight:700;color:#F8FAFC;">Community Edition</h3>
-                    <div style="font-size:2.5rem;font-weight:800;color:#3B82F6;margin:16px 0 8px 0;">$0 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/ Forever Free</span></div>
-                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Ideal for labs, initial testing, and small server clusters.</p>
-                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;color:#CBD5E1;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:24px;">
+                <!-- Free Tier -->
+                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:16px;padding:28px;text-align:center;">
+                    <h3 style="font-size:1.2rem;font-weight:700;color:#F8FAFC;">Community Edition</h3>
+                    <div style="font-size:2.2rem;font-weight:800;color:#3B82F6;margin:14px 0 6px 0;">$0 <span style="font-size:0.9rem;color:var(--text-muted);font-weight:400;">/ Forever Free</span></div>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">Ideal for labs, initial testing, and small server clusters.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;font-size:0.85rem;color:#CBD5E1;">
                         <li>✔ Up to 10 Server Nodes</li>
                         <li>✔ Full Monitoring & Drift Engine</li>
                         <li>✔ Unlimited Upload File Size</li>
@@ -411,12 +411,12 @@
                 </div>
 
                 <!-- Professional Tier -->
-                <div class="pricing-card" style="background:var(--bg-glass);border:2px solid #1754D1;border-radius:16px;padding:32px;text-align:center;box-shadow:0 8px 30px rgba(23,84,209,0.25);">
-                    <div style="background:#1754D1;color:#fff;font-size:0.75rem;font-weight:700;padding:4px 16px;border-radius:20px;text-transform:uppercase;display:inline-block;margin-bottom:12px;">Most Popular</div>
-                    <h3 style="font-size:1.3rem;font-weight:700;color:#F8FAFC;">Professional / MSP</h3>
-                    <div style="font-size:2.5rem;font-weight:800;color:#60A5FA;margin:16px 0 8px 0;">$49 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/ Year (Fair Low Cost)</span></div>
-                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">Perfect for growing infrastructure & MSP project clients.</p>
-                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;color:#CBD5E1;">
+                <div class="pricing-card" style="background:var(--bg-glass);border:2px solid #1754D1;border-radius:16px;padding:28px;text-align:center;box-shadow:0 8px 30px rgba(23,84,209,0.25);">
+                    <div style="background:#1754D1;color:#fff;font-size:0.75rem;font-weight:700;padding:4px 16px;border-radius:20px;text-transform:uppercase;display:inline-block;margin-bottom:8px;">Most Popular</div>
+                    <h3 style="font-size:1.2rem;font-weight:700;color:#F8FAFC;">Professional / MSP</h3>
+                    <div style="font-size:2.2rem;font-weight:800;color:#60A5FA;margin:14px 0 6px 0;">$49 <span style="font-size:0.9rem;color:var(--text-muted);font-weight:400;">/ Year (Low Cost)</span></div>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">Perfect for growing infrastructure & MSP project clients.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;font-size:0.85rem;color:#CBD5E1;">
                         <li>✔ Up to 50 Server Nodes</li>
                         <li>✔ Multi-Tenant MSP Scope Filter</li>
                         <li>✔ Custom Client Name Branding</li>
@@ -427,11 +427,11 @@
                 </div>
 
                 <!-- Enterprise Tier -->
-                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:16px;padding:32px;text-align:center;">
-                    <h3 style="font-size:1.3rem;font-weight:700;color:#F8FAFC;">Enterprise Edition</h3>
-                    <div style="font-size:2.5rem;font-weight:800;color:#10B981;margin:16px 0 8px 0;">$149 <span style="font-size:1rem;color:var(--text-muted);font-weight:400;">/ Year (Fair Low Cost)</span></div>
-                    <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:24px;">For mission-critical data centers & multi-project deployments.</p>
-                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:32px;display:flex;flex-direction:column;gap:12px;font-size:0.9rem;color:#CBD5E1;">
+                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid var(--border-glass);border-radius:16px;padding:28px;text-align:center;">
+                    <h3 style="font-size:1.2rem;font-weight:700;color:#F8FAFC;">Enterprise Edition</h3>
+                    <div style="font-size:2.2rem;font-weight:800;color:#10B981;margin:14px 0 6px 0;">$149 <span style="font-size:0.9rem;color:var(--text-muted);font-weight:400;">/ Year (Low Cost)</span></div>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">For mission-critical data centers & multi-project deployments.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;font-size:0.85rem;color:#CBD5E1;">
                         <li>✔ 250 to 1,000+ Server Nodes</li>
                         <li>✔ Hardware Machine ID Lock Option</li>
                         <li>✔ Multi-Project Scope Authorization</li>
@@ -439,6 +439,21 @@
                         <li>✔ Priority Technical Support</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary" style="width:100%;">Contact Licensing Team</a>
+                </div>
+
+                <!-- Custom Requirements Tier -->
+                <div class="pricing-card" style="background:var(--bg-glass);border:1px solid rgba(244,63,94,0.4);border-radius:16px;padding:28px;text-align:center;">
+                    <h3 style="font-size:1.2rem;font-weight:700;color:#F8FAFC;">Custom Requirements</h3>
+                    <div style="font-size:2.2rem;font-weight:800;color:#F43F5E;margin:14px 0 6px 0;">Custom <span style="font-size:0.9rem;color:var(--text-muted);font-weight:400;">Quote</span></div>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">For custom SLA, unlimited nodes, or bespoke compliance rules.</p>
+                    <ul style="text-align:left;list-style:none;padding:0;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;font-size:0.85rem;color:#CBD5E1;">
+                        <li>✔ Unlimited Node Count (500 to 10,000+ Hosts)</li>
+                        <li>✔ Tailored OS Compliance & Custom CIS Hardening</li>
+                        <li>✔ Dedicated On-Premises Air-Gapped Key Server Setup</li>
+                        <li>✔ Custom SLAs & 24/7 Dedicated Support</li>
+                        <li>✔ Official Tax Invoicing & Bank Wire Options</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline" style="width:100%;border-color:#F43F5E;color:#F43F5E;">Get Custom Quote</a>
                 </div>
             </div>
         </div>
