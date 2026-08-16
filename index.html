@@ -6,7 +6,9 @@
     <title>InfraSight — Enterprise Linux Health Dashboard | Centralized Infrastructure Monitoring & Compliance Engine</title>
     <meta name="description" content="InfraSight Enterprise: Centralized Linux Health & Compliance Engine. Multi-OS Kernel Advisory, Before/After Infrastructure Drift Comparison, Patch Compliance Scoring, Remote SSH Executor, and Multi-Tenant MSP White-Labeling. 100% Air-Gapped Ready.">
     <meta property="og:title" content="InfraSight — Enterprise Linux Health Dashboard">
-    <meta property="og:description" content="Centralized Linux Infrastructure Monitoring, Patch Compliance, Kernel Advisory, and Multi-Tenant MSP Platform. 100% Offline Air-Gapped Ready.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -44,7 +46,7 @@
         <div class="container">
             <div class="badge-pill">
                 <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
-                InfraSight Enterprise v2026 &nbsp;•&nbsp; Multi-OS Kernel Advisory &nbsp;•&nbsp; Remote SSH Executor &nbsp;•&nbsp; MSP White-Labeling
+                InfraSight Enterprise v2026 &nbsp;•&nbsp; Multi-Server Orchestrator &nbsp;•&nbsp; Web SSH Terminal &nbsp;•&nbsp; Kernel Advisory &nbsp;•&nbsp; MSP White-Labeling
             </div>
 
             <h1 class="hero-title">
@@ -53,8 +55,8 @@
 
             <p class="hero-subtitle">
                 Instant 3-second health scans. Zero background daemon overhead. 100% offline air-gapped readiness.
-                Before/after infrastructure drift comparison. One-click remote SSH health check push across hundreds of servers.
-                Multi-tenant MSP white-labeling — all from a single central dashboard.
+                Ansible-like Multi-Server Orchestrator with pre/postcheck validation pipelines. Built-in Web SSH Terminal.
+                Before/after infrastructure drift comparison. Multi-tenant MSP white-labeling — all from a single central dashboard.
             </p>
 
             <div class="hero-ctas">
@@ -107,7 +109,7 @@
                     <div class="output-info">[INFO] Detecting OS: Red Hat Enterprise Linux 8.10 (Ootpa)...</div>
                     <div class="output-info">[INFO] Setting up Python venv &amp; Gunicorn at /opt/infrasight...</div>
                     <div class="output-info">[INFO] Configuring Nginx reverse proxy (catch-all domain + direct IP)...</div>
-                    <div class="output-info">[INFO] Installing paramiko for Remote SSH Executor module...</div>
+                    <div class="output-info">[INFO] Initializing Remote SSH Executor &amp; Multi-Server Orchestrator...</div>
                     <div class="output-info">[INFO] Activating commercial license — Enterprise Edition (250 Hosts)...</div>
                     <div class="output-success">[SUCCESS] InfraSight Master Application Server deployed in 3.1s!</div>
                     <div class="output-success">► Web UI: http://10.0.27.53:8088 &nbsp;|&nbsp; Secure: https://health.acmecorp.com</div>
@@ -161,7 +163,7 @@
                     <ul class="compare-list">
                         <li>
                             <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;flex-shrink:0;"></i>
-                            <span><strong>One-Click Remote SSH Push:</strong> Push and execute health_check.sh on any server directly from the dashboard UI via password-based SSH. No pre-configured keys needed.</span>
+                            <span><strong>Ansible-Like Orchestrator &amp; SSH Push:</strong> Run rolling serial or parallel command pipelines with pre/postcheck validation across hundreds of servers directly from the dashboard.</span>
                         </li>
                         <li>
                             <i data-lucide="check-circle-2" style="color:#10B981;width:18px;height:18px;flex-shrink:0;"></i>
@@ -182,6 +184,72 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- ONE Strong Differentiator & Comparison Matrix -->
+            <div style="margin-top:48px;background:linear-gradient(145deg, rgba(15,23,42,0.85), rgba(30,41,59,0.5));border:1px solid rgba(244,63,94,0.3);border-radius:20px;padding:36px 32px;box-shadow:0 12px 40px rgba(0,0,0,0.4);">
+                
+                <!-- Strong Point Banner -->
+                <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap;">
+                    <span style="background:rgba(244,63,94,0.15);color:#FB7185;border:1px solid rgba(244,63,94,0.35);padding:6px 14px;border-radius:20px;font-size:0.82rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;display:inline-flex;align-items:center;gap:6px;">
+                        <i data-lucide="zap" style="width:15px;height:15px;"></i> The #1 Core Advantage
+                    </span>
+                    <h3 style="color:#F8FAFC;font-size:1.45rem;font-weight:800;margin:0;">
+                        Why Choose InfraSight Over Ansible &amp; Traditional Monitoring?
+                    </h3>
+                </div>
+
+                <p style="color:#CBD5E1;font-size:1.02rem;line-height:1.75;margin-bottom:28px;">
+                    <strong>The One Strong Reason:</strong> Ansible gives you automation but lacks automated 3-second health audits and visual drift tracking. Traditional monitoring (Datadog, Zabbix) graphs metrics but consumes 200MB+ background RAM and cannot execute remote maintenance commands. 
+                    <span style="color:#60A5FA;font-weight:600;">InfraSight bridges both into a single unified web platform — giving you Ansible-level multi-server orchestration (with rolling serial &amp; parallel pipelines) AND comprehensive 31-category health audits without writing YAML, without pre-configuring SSH keys, without background agents, and with 100% offline air-gapped readiness.</span>
+                </p>
+
+                <!-- Comparison Table -->
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:separate;border-spacing:0;font-size:0.9rem;text-align:left;border-radius:12px;overflow:hidden;border:1px solid var(--border-glass);">
+                        <thead>
+                            <tr style="background:rgba(15,23,42,0.9);color:#F8FAFC;">
+                                <th style="padding:14px 18px;font-weight:700;border-bottom:1px solid var(--border-glass);width:26%;">Feature &amp; Operational Capability</th>
+                                <th style="padding:14px 18px;font-weight:700;border-bottom:1px solid var(--border-glass);width:24%;color:#94A3B8;">Ansible / SaltStack</th>
+                                <th style="padding:14px 18px;font-weight:700;border-bottom:1px solid var(--border-glass);width:24%;color:#94A3B8;">Legacy Agents (Datadog/Zabbix)</th>
+                                <th style="padding:14px 18px;font-weight:800;border-bottom:1px solid var(--border-glass);width:26%;background:rgba(244,63,94,0.15);color:#FB7185;">InfraSight Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(15,23,42,0.4);">
+                                <td style="padding:14px 18px;font-weight:600;color:#F8FAFC;border-bottom:1px solid rgba(255,255,255,0.05);">Client Node Requirements</td>
+                                <td style="padding:14px 18px;color:#94A3B8;border-bottom:1px solid rgba(255,255,255,0.05);">⚠️ Requires Python &amp; SSH key distribution</td>
+                                <td style="padding:14px 18px;color:#EF4444;border-bottom:1px solid rgba(255,255,255,0.05);">❌ Heavy background agent (200MB+ RAM)</td>
+                                <td style="padding:14px 18px;font-weight:700;color:#34D399;background:rgba(244,63,94,0.08);border-bottom:1px solid rgba(255,255,255,0.05);">✔ <strong>Zero Agents, Zero Python (POSIX bash)</strong></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(15,23,42,0.2);">
+                                <td style="padding:14px 18px;font-weight:600;color:#F8FAFC;border-bottom:1px solid rgba(255,255,255,0.05);">Change Verification (Pre/Post)</td>
+                                <td style="padding:14px 18px;color:#94A3B8;border-bottom:1px solid rgba(255,255,255,0.05);">⚠️ Manual playbooks; no visual diff matrix</td>
+                                <td style="padding:14px 18px;color:#EF4444;border-bottom:1px solid rgba(255,255,255,0.05);">❌ Point-in-time metrics; no change pipeline</td>
+                                <td style="padding:14px 18px;font-weight:700;color:#34D399;background:rgba(244,63,94,0.08);border-bottom:1px solid rgba(255,255,255,0.05);">✔ <strong>Precheck ➔ Run ➔ Postcheck Diff Matrix</strong></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(15,23,42,0.4);">
+                                <td style="padding:14px 18px;font-weight:600;color:#F8FAFC;border-bottom:1px solid rgba(255,255,255,0.05);">Unified Web UI &amp; 1-Click Action</td>
+                                <td style="padding:14px 18px;color:#94A3B8;border-bottom:1px solid rgba(255,255,255,0.05);">❌ CLI-only (or costly AWX/Tower complex setup)</td>
+                                <td style="padding:14px 18px;color:#94A3B8;border-bottom:1px solid rgba(255,255,255,0.05);">⚠️ Read-only charts; cannot run custom scripts</td>
+                                <td style="padding:14px 18px;font-weight:700;color:#34D399;background:rgba(244,63,94,0.08);border-bottom:1px solid rgba(255,255,255,0.05);">✔ <strong>Unified Web UI + Terminal + Orchestrator</strong></td>
+                            </tr>
+                            <tr style="border-bottom:1px solid rgba(255,255,255,0.05);background:rgba(15,23,42,0.2);">
+                                <td style="padding:14px 18px;font-weight:600;color:#F8FAFC;border-bottom:1px solid rgba(255,255,255,0.05);">Offline / Air-Gapped Networks</td>
+                                <td style="padding:14px 18px;color:#94A3B8;border-bottom:1px solid rgba(255,255,255,0.05);">⚠️ Complex offline package repository setup</td>
+                                <td style="padding:14px 18px;color:#EF4444;border-bottom:1px solid rgba(255,255,255,0.05);">❌ Fails (mandatory cloud API phone-home)</td>
+                                <td style="padding:14px 18px;font-weight:700;color:#34D399;background:rgba(244,63,94,0.08);border-bottom:1px solid rgba(255,255,255,0.05);">✔ <strong>100% Air-Gapped Ready (Local HMAC keys)</strong></td>
+                            </tr>
+                            <tr style="background:rgba(15,23,42,0.4);">
+                                <td style="padding:14px 18px;font-weight:600;color:#F8FAFC;">Cost &amp; Licensing Model</td>
+                                <td style="padding:14px 18px;color:#94A3B8;">Open-source CLI or $10,000+ Enterprise Tower</td>
+                                <td style="padding:14px 18px;color:#EF4444;">❌ $15–$30/server/mo ($36,000/yr for 100 VMs)</td>
+                                <td style="padding:14px 18px;font-weight:700;color:#34D399;background:rgba(244,63,94,0.08);">✔ <strong>Flat Annual License — $0 Per-Node Fees</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -191,7 +259,7 @@
             <div class="section-header">
                 <span class="section-tag">Platform Capabilities</span>
                 <h2 class="section-title">Designed for Mission-Critical Production Data Centers</h2>
-                <p class="section-desc">Everything sysadmins, DevOps leads, and MSP providers need to audit, secure, and maintain enterprise Linux environments at scale.</p>
+                <p class="section-desc">Everything sysadmins, DevOps leads, and MSP providers need to audit, orchestrate, secure, and maintain enterprise Linux environments at scale.</p>
             </div>
 
             <div class="grid-3">
@@ -204,58 +272,79 @@
 
                 <!-- Feature 2 -->
                 <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="workflow" style="width:26px;height:26px;"></i></div>
+                    <h3 class="feature-title">Ansible-Like Multi-Server Orchestrator</h3>
+                    <p class="feature-desc">Execute bulk commands and multi-line scripts across server fleets with <strong>Parallel Concurrent</strong> or <strong>Rolling Serial (1-by-1)</strong> execution. Features precheck, main command, and postcheck validation stages with fail-safe stop on first failure.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="terminal" style="width:26px;height:26px;"></i></div>
+                    <h3 class="feature-title">Integrated Web SSH Terminal</h3>
+                    <p class="feature-desc">Direct browser-based SSH terminal to connect to any managed server. Execute diagnostic commands, view real-time terminal output, switch privileges via sudo, and manage remote systems without leaving the dashboard.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="shield-alert" style="width:26px;height:26px;"></i></div>
                     <h3 class="feature-title">Enterprise Patch &amp; Vulnerability Scoring</h3>
                     <p class="feature-desc">Parses available, security, and critical package updates. Calculates a <strong>Patch Compliance Score (%)</strong> with penalty deductions for unpatched CVEs, reboot requirements, and critical security updates pending.</p>
                 </div>
 
-                <!-- Feature 3 -->
+                <!-- Feature 5 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="cpu" style="width:26px;height:26px;"></i></div>
                     <h3 class="feature-title">Multi-OS Kernel Advisory Engine</h3>
                     <p class="feature-desc">Compares running kernels against vendor security baselines across RHEL 6–10, Ubuntu 18–26 LTS, Rocky, AlmaLinux, Oracle Linux 6–10, Amazon Linux 2 &amp; 2023, and SUSE SLES. Shows UP-TO-DATE or OUTDATED badge per server.</p>
                 </div>
 
-                <!-- Feature 4 -->
+                <!-- Feature 6 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="git-compare" style="width:26px;height:26px;"></i></div>
                     <h3 class="feature-title">Before vs. After Infrastructure Drift</h3>
                     <p class="feature-desc">Side-by-side diff matrix comparing hardware specs, kernel versions, memory, disk partitions, network routes, DNS, firewall rules, installed packages, services, and cron changes between any two scan snapshots.</p>
                 </div>
 
-                <!-- Feature 5 -->
+                <!-- Feature 7 -->
                 <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="terminal" style="width:26px;height:26px;"></i></div>
-                    <h3 class="feature-title">Remote SSH Executor</h3>
-                    <p class="feature-desc">Push and execute health_check.sh on any client server directly from the dashboard via password-based SSH (no key setup required). Supports sudo escalation, live output streaming, multi-server parallel execution, and credential storage.</p>
+                    <div class="feature-icon"><i data-lucide="key-round" style="width:26px;height:26px;"></i></div>
+                    <h3 class="feature-title">Secure Credential Vault &amp; Governance</h3>
+                    <p class="feature-desc">Encrypted local storage for SSH passwords and private keys (RSA/ED25519) with automatic host-matching, auto-fill for 1-click audit dispatch, and strict license capacity limit enforcement.</p>
                 </div>
 
-                <!-- Feature 6 -->
+                <!-- Feature 8 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="activity" style="width:26px;height:26px;"></i></div>
+                    <h3 class="feature-title">Pre-Flight Connectivity Engine</h3>
+                    <p class="feature-desc">Automated SSH port 22 probes, latency measurements, and credential verification across selected server lists before triggering bulk execution or health check deployments.</p>
+                </div>
+
+                <!-- Feature 9 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="building-2" style="width:26px;height:26px;"></i></div>
                     <h3 class="feature-title">Multi-Tenant MSP Architecture</h3>
                     <p class="feature-desc">Manage multiple client environments from a single Master installation with isolated tenant views, client scope filter, custom client name branding, logo white-labeling, and per-user RBAC permission scopes.</p>
                 </div>
 
-                <!-- Feature 7 -->
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="key-round" style="width:26px;height:26px;"></i></div>
-                    <h3 class="feature-title">Web User RBAC &amp; Client Permissions</h3>
-                    <p class="feature-desc">Web-based user management allowing admins to create accounts, reset passwords, and assign per-user client permission scopes — restricting each operator to only their authorized server group.</p>
-                </div>
-
-                <!-- Feature 8 -->
+                <!-- Feature 10 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="shield-check" style="width:26px;height:26px;"></i></div>
-                    <h3 class="feature-title">Security Precheck &amp; Audit Engine</h3>
+                    <h3 class="feature-title">Security Precheck &amp; Access Audit</h3>
                     <p class="feature-desc">Audits SSH configuration (PermitRootLogin, PasswordAuth, MaxAuthTries), sudo rules, failed login attempts (brute-force detection via <code>lastb</code>), last login per user, firewall policy, SELinux status, and PAM configuration.</p>
                 </div>
 
-                <!-- Feature 9 -->
+                <!-- Feature 11 -->
                 <div class="feature-card">
                     <div class="feature-icon"><i data-lucide="clock" style="width:26px;height:26px;"></i></div>
                     <h3 class="feature-title">Full Cron &amp; Scheduler Visibility</h3>
                     <p class="feature-desc">Enumerates crontabs for ALL system users (not just root), plus <code>/etc/cron.d/</code>, <code>/etc/cron.daily/</code>, <code>/etc/cron.weekly/</code>, and <code>/etc/cron.monthly/</code> — giving complete visibility into scheduled job inventory.</p>
+                </div>
+
+                <!-- Feature 12 -->
+                <div class="feature-card">
+                    <div class="feature-icon"><i data-lucide="file-text" style="width:26px;height:26px;"></i></div>
+                    <h3 class="feature-title">Executive PDF &amp; HTML Reporting</h3>
+                    <p class="feature-desc">Generate professional audit reports formatted for executive review and compliance certifications (SOC2, ISO27001, HIPAA). Download raw JSON, structured TXT, or branded HTML at any time.</p>
                 </div>
             </div>
 
@@ -489,16 +578,16 @@
                 </div>
             </div>
 
-            <!-- Tab 4: Remote Push -->
+            <!-- Tab 4: Remote Push & Orchestrator -->
             <div id="tab-remote" class="install-box tab-content" style="display:none;">
-                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 4: One-Click Remote SSH Health Check Push</h3>
-                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">From the dashboard UI, push and execute the health check script on any client server via SSH password authentication — no pre-configured keys required:</p>
+                <h3 style="font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#F8FAFC;">Step 4: Remote SSH Executor, Web Terminal &amp; Multi-Server Orchestrator</h3>
+                <p style="color:var(--text-muted);font-size:0.95rem;margin-bottom:16px;">Directly from the web UI, audit, manage, and execute automated pipelines across your Linux fleet:</p>
                 <div class="output-info" style="font-size:0.85rem;line-height:1.8;">
-                    ✔ Navigate to <strong>Dashboard → Remote Executor</strong> or click the <strong>"Run HC"</strong> button on any server row.<br>
-                    ✔ Enter SSH username + password (with optional <code>sudo</code> escalation for root-level checks).<br>
-                    ✔ Save credentials per host — encrypted in local SQLite DB for future one-click runs.<br>
-                    ✔ Live output streams directly in the browser as the script executes remotely.<br>
-                    ✔ Multi-Server Bulk Executor: enter N servers (same or different credentials) and run any command in parallel — with before/after capture (e.g., <code>free -h</code> before and after cache clear).
+                    ✔ <strong>1-Click Health Check Push:</strong> Push and execute <code>health_check.sh</code> on target servers via password or SSH private key with live terminal streaming.<br>
+                    ✔ <strong>Interactive Web SSH Terminal:</strong> Direct browser-based SSH terminal with real-time output, command history, and seamless sudo root switching.<br>
+                    ✔ <strong>Multi-Server Orchestrator:</strong> Run bulk multi-line bash scripts across hundreds of servers with <strong>Rolling Serial (1-by-1)</strong> or <strong>Parallel Concurrent</strong> strategies.<br>
+                    ✔ <strong>Automated Verification Pipelines:</strong> Run Precheck, Main Command, and Postcheck stages with side-by-side diff matrix and <em>Stop on first failure</em> protection.<br>
+                    ✔ <strong>Secure Encrypted Vault:</strong> Store SSH credentials and private keys locally with automatic host-matching and commercial capacity governance.
                 </div>
             </div>
         </div>
@@ -524,7 +613,7 @@
                         <li>✔ Full Monitoring, Drift &amp; Security Engine</li>
                         <li>✔ Unlimited Report History</li>
                         <li>✔ 100% Offline Air-Gapped Ready</li>
-                        <li>✔ Remote SSH Executor (Basic)</li>
+                        <li>✔ Remote SSH Executor &amp; Web Terminal</li>
                     </ul>
                     <a href="#installation" class="btn btn-outline" style="width:100%;">Get Started Free</a>
                 </div>
@@ -538,10 +627,11 @@
                     <ul style="text-align:left;list-style:none;padding:0;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;font-size:0.85rem;color:#CBD5E1;">
                         <li>✔ Up to 50 Server Nodes</li>
                         <li>✔ Multi-Tenant MSP Scope Filter</li>
+                        <li>✔ Multi-Server Orchestrator (Parallel &amp; Serial)</li>
+                        <li>✔ Encrypted Credential Vault</li>
                         <li>✔ Custom Client Name Branding</li>
                         <li>✔ Signed Cryptographic License Key</li>
                         <li>✔ Email Support &amp; Bug Fix Priority</li>
-                        <li>✔ Remote SSH Executor (Full)</li>
                     </ul>
                     <a href="#contact" class="btn btn-primary" style="width:100%;">Request License Key</a>
                 </div>
@@ -553,6 +643,7 @@
                     <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">For mission-critical data centers &amp; multi-project enterprise deployments.</p>
                     <ul style="text-align:left;list-style:none;padding:0;margin-bottom:28px;display:flex;flex-direction:column;gap:10px;font-size:0.85rem;color:#CBD5E1;">
                         <li>✔ Up to 250 Server Nodes</li>
+                        <li>✔ Unlimited Orchestrator Pipelines</li>
                         <li>✔ Hardware Machine-ID Lock Binding</li>
                         <li>✔ Multi-Project Scope Authorization</li>
                         <li>✔ Custom Logo &amp; Full White-Labeling</li>
@@ -592,7 +683,7 @@
             <div class="section-header">
                 <span class="section-tag">Got Questions?</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <p class="section-desc">Everything you need to know about licensing, deployment, offline execution, security, and support.</p>
+                <p class="section-desc">Everything you need to know about licensing, deployment, offline execution, security, orchestrator, and support.</p>
             </div>
 
             <div class="faq-grid">
@@ -610,6 +701,17 @@
                 <!-- FAQ 2 -->
                 <div class="faq-item">
                     <div class="faq-question">
+                        <span>How does the Multi-Server Orchestrator work compared to Ansible or SaltStack?</span>
+                        <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Unlike Ansible or SaltStack, InfraSight requires <strong>zero agent installations and zero Python dependencies on client servers</strong>. You can execute multi-line bash scripts across hundreds of Linux VMs directly from your browser. It supports both <strong>Parallel Concurrent</strong> execution for maximum speed and <strong>Rolling Serial (1-by-1)</strong> execution with automated <em>Stop on first failure</em> fail-safes to safeguard production systems.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
                         <span>Can client servers upload reports over a Private IP without internet access?</span>
                         <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
                     </div>
@@ -618,7 +720,18 @@
                     </div>
                 </div>
 
-                <!-- FAQ 3 -->
+                <!-- FAQ 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are stored SSH passwords and private keys secure in the Credential Vault?</span>
+                        <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <strong>Yes.</strong> All stored credentials and SSH private keys (RSA, ED25519) are stored in an encrypted local database on the Master server. They are never exported, never logged to terminal history, and never transmitted to any third-party service. Access is strictly governed by user RBAC permission scopes.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>What happens when a commercial license reaches its expiration date?</span>
@@ -629,7 +742,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ 4 -->
+                <!-- FAQ 6 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Does the client agent run continuously as a background daemon?</span>
@@ -640,18 +753,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ 5 -->
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>How does the Remote SSH Executor work? Does it need pre-configured SSH keys?</span>
-                        <i data-lucide="chevron-down" style="width:18px;height:18px;"></i>
-                    </div>
-                    <div class="faq-answer">
-                        The Remote SSH Executor uses <strong>password-based SSH authentication</strong> — no pre-configured SSH keys needed. From the dashboard UI, enter the target server IP, SSH username, and password (with optional <code>sudo</code> escalation). The platform securely uploads <code>health_check.sh</code> via SFTP and executes it, streaming live output back to your browser. Credentials can be saved per host in an encrypted local database for future one-click runs.
-                    </div>
-                </div>
-
-                <!-- FAQ 6 -->
+                <!-- FAQ 7 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How does client organization and project scope binding work in licenses?</span>
@@ -662,7 +764,7 @@
                     </div>
                 </div>
 
-                <!-- FAQ 7 -->
+                <!-- FAQ 8 -->
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Will reinstalling or upgrading InfraSight remove my existing license?</span>
