@@ -1,0 +1,6 @@
+{
+  "version": "2.1.0",
+  "release_date": "2026-08-20",
+  "release_notes": "## InfraSight Enterprise v2.1.0\n\n### New Features & Improvements\n- **Custom Application & Process Monitor**: Monitor custom services by adding patterns to /etc/health-check/custom_processes.txt with full executed command line arguments display.\n- **Execution & Change Attribution**: Automated root-cause diagnostics identifying whether system mutations originated from Manual Admin Actions (Interactive SSH/TTY) or Automated System Tasks (Timers/Cron/Daemons).\n- **Disk Under-Utilization Diagnostics**: Fixed JSON endpoint and export for Physical, LVM VG/LV, and Thin Pool discard advisories.\n- **Multi-OS Compatibility Hardening**: Verified and hardened across RHEL 6-10, Amazon Linux 2/2023, Ubuntu 16.04-26.04, Debian 10-12, and SUSE SLES.\n- **Interactive Pillar Recommendations**: Click-to-filter actionable recommendations by Pillar (Health, CIS Compliance, Diagnosis).\n- **Settings UI & License Status**: Balanced 2-column layout with accurate Licensed Edition status display.",
+  "download_url": "https://prathaps8675.github.io/linux-checklist-pages/"
+}
